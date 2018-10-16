@@ -2,3 +2,10 @@
 <button (click)="test()">Predict</button>
 
 <pre>{{logMessage}}</pre>
+
+<div>
+  <div *ngFor="let item of displayData">
+    {{item.text}}
+    <ng-container *ngIf="!item.correct">ERROR</ng-container>
+  </div>
+</div>
